@@ -1,0 +1,109 @@
+.tokenizer-demo {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.tokenizer-input-wrap {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.tokenizer-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  padding-right: 6rem;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--bg-surface-clay);
+  box-shadow: var(--clay-shadow-pressed);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  outline: none;
+  transition: box-shadow var(--duration-base);
+}
+.tokenizer-input:focus {
+  box-shadow: var(--clay-shadow-pressed), 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+.tokenizer-input::placeholder {
+  color: var(--text-muted);
+}
+.tokenizer-count {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-1);
+  font-family: var(--font-mono);
+  background: rgba(99, 102, 241, 0.1);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+.tokenizer-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 50px;
+  padding: 1rem;
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: var(--glass-border);
+}
+.token-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+  font-size: 0.85rem;
+  cursor: default;
+  transition: transform var(--duration-fast), box-shadow var(--duration-fast);
+}
+.token-chip:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.token-chip__index {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.token-chip__text {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+.token-chip__type {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.tokenizer-legend {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  justify-content: center;
+}
+.tokenizer-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.tokenizer-legend__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}

@@ -1,0 +1,15 @@
+.clay-card {
+  background: var(--bg-surface-clay);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--clay-shadow);
+  transition: box-shadow var(--duration-base) var(--ease-smooth),
+              transform var(--duration-base) var(--ease-smooth);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.clay-card:hover {
+  box-shadow: var(--clay-shadow-hover);
+}
+.clay-card--glow:hover {
+  border-color: rgba(99, 102, 241, 0.2);
+}

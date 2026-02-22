@@ -1,0 +1,23 @@
+.footer {
+  padding: 3rem 0;
+  background: var(--bg-secondary);
+  border-top: var(--glass-border);
+  text-align: center;
+}
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.footer__text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.footer__heart {
+  display: inline-block;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}

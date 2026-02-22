@@ -1,0 +1,30 @@
+.llm-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.llm-card {
+  text-align: left;
+}
+.llm-card__icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: box-shadow var(--duration-base);
+}
+.llm-card:hover .llm-card__icon-wrap {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+.llm-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.llm-card__desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}

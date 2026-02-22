@@ -1,0 +1,34 @@
+.lim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.lim-card__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.lim-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+.lim-card__example {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid rgba(255,255,255,0.1);
+  margin: 0 0 0.75rem;
+  line-height: 1.6;
+}
+.lim-card__explain {
+  font-size: 0.85rem;
+  line-height: 1.7;
+}

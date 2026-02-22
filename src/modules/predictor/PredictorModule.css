@@ -1,0 +1,104 @@
+.pred-wrap {
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.pred-input-group { width: 100%; }
+.pred-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--bg-surface-clay);
+  box-shadow: var(--clay-shadow-pressed);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  outline: none;
+  transition: box-shadow var(--duration-base);
+}
+.pred-input:focus {
+  box-shadow: var(--clay-shadow-pressed), 0 0 0 3px rgba(99,102,241,0.2);
+}
+.pred-input::placeholder { color: var(--text-muted); }
+.pred-slider-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.pred-temp-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+.pred-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.pred-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-clay);
+  box-shadow: var(--clay-shadow-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--duration-fast);
+  text-align: left;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+}
+.pred-row:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--clay-shadow-hover);
+}
+.pred-row--winner {
+  border-left: 3px solid var(--accent-1);
+}
+.pred-rank {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(99,102,241,0.15);
+  color: var(--accent-1);
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.pred-word {
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-width: 70px;
+}
+.pred-bar-track {
+  flex: 1;
+  height: 8px;
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.pred-bar-fill {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: var(--radius-full);
+}
+.pred-pct {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-3);
+  min-width: 50px;
+  text-align: right;
+}
+.pred-click-hint {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-align: center;
+}

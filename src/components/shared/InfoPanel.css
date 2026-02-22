@@ -1,0 +1,22 @@
+.info-panel {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-left: 3px solid var(--accent-1);
+  border-radius: var(--radius-md);
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.info-panel__icon {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+.info-panel__content strong {
+  color: var(--text-primary);
+}

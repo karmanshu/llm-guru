@@ -1,0 +1,19 @@
+.section {
+  padding: 6rem 0;
+  position: relative;
+  width: 100%;
+}
+.section--alt {
+  background-color: var(--bg-secondary);
+}
+.section__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 4rem 0; }
+  .section__container { padding: 0 1.25rem; }
+}
