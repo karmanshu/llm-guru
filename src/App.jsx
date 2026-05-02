@@ -38,6 +38,14 @@ function LoadingFallback() {
 export default function App() {
   return (
     <ThemeProvider>
+      {/* Ambient background glow system */}
+      <div className="ambient-bg" aria-hidden="true">
+        <div className="ambient-bg__blob ambient-bg__blob--1" />
+        <div className="ambient-bg__blob ambient-bg__blob--2" />
+        <div className="ambient-bg__blob ambient-bg__blob--3" />
+      </div>
+      <div className="noise-overlay" aria-hidden="true" />
+
       <a href="#what-is-llm" className="skip-link">Skip to content</a>
       <Navbar />
       <ThemeToggle />

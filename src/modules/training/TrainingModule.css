@@ -26,11 +26,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.2);
 }
 .training-phase__line {
   width: 2px;
   height: 40px;
-  background: rgba(255,255,255,0.08);
+  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.3), rgba(255,255,255,0.05));
   margin-top: 0.5rem;
 }
 .training-phase__content {
@@ -44,6 +45,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 0.75rem;
+  transition: box-shadow var(--duration-base);
+}
+.training-phase:hover .training-phase__icon-wrap {
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.15);
 }
 .training-phase__title {
   font-size: 1.05rem;
@@ -69,4 +74,9 @@
   border: var(--glass-border);
   border-radius: var(--radius-full);
   color: var(--text-muted);
+  transition: border-color var(--duration-fast), color var(--duration-fast);
+}
+.training-phase__details li:hover {
+  border-color: rgba(99, 102, 241, 0.2);
+  color: var(--text-secondary);
 }

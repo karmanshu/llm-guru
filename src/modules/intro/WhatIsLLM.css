@@ -14,10 +14,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
-  transition: box-shadow var(--duration-base);
+  transition: box-shadow var(--duration-base), transform var(--duration-base);
 }
 .llm-card:hover .llm-card__icon-wrap {
-  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 0 24px rgba(99, 102, 241, 0.25);
+  transform: scale(1.05);
 }
 .llm-card__title {
   font-size: 1.2rem;

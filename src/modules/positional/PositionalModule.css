@@ -30,12 +30,13 @@
 .positional-token-btn:hover {
   border-color: var(--accent-1);
   color: var(--text-primary);
+  box-shadow: var(--clay-shadow-sm), 0 0 12px rgba(99, 102, 241, 0.1);
 }
 .positional-token-btn--active {
   background: var(--accent-1);
   color: white;
   border-color: var(--accent-1);
-  box-shadow: 0 0 16px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
 }
 .positional-token-btn__idx {
   font-size: 0.65rem;
@@ -47,6 +48,10 @@
   border-radius: var(--radius-md);
   background: var(--bg-surface-clay);
   box-shadow: var(--clay-shadow);
+  transition: box-shadow var(--duration-base);
+}
+.positional-canvas:hover {
+  box-shadow: var(--clay-shadow-hover), 0 0 30px rgba(99, 102, 241, 0.06);
 }
 .positional-formula {
   font-family: var(--font-mono);

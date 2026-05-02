@@ -10,6 +10,10 @@
   border-radius: var(--radius-md);
   background: var(--bg-surface-clay);
   box-shadow: var(--clay-shadow);
+  transition: box-shadow var(--duration-base);
+}
+.embeddings-canvas:hover {
+  box-shadow: var(--clay-shadow-hover), 0 0 30px rgba(99, 102, 241, 0.06);
 }
 .embeddings-controls {
   display: flex;
@@ -23,6 +27,7 @@
   padding: 0.5rem 1rem;
   background: rgba(192, 132, 252, 0.08);
   border-radius: var(--radius-sm);
+  border: 1px solid rgba(192, 132, 252, 0.1);
 }
 .embeddings-legend {
   display: flex;
@@ -36,11 +41,19 @@
   gap: 0.35rem;
   font-size: 0.8rem;
   color: var(--text-muted);
+  transition: color var(--duration-fast);
+}
+.embeddings-legend__item:hover {
+  color: var(--text-secondary);
 }
 .embeddings-legend__dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  transition: box-shadow var(--duration-fast);
+}
+.embeddings-legend__item:hover .embeddings-legend__dot {
+  box-shadow: 0 0 8px currentColor;
 }
 
 @media (max-width: 768px) {

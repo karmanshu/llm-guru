@@ -13,6 +13,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  transition: box-shadow var(--duration-base), transform var(--duration-base);
+}
+.clay-card:hover .lim-card__icon {
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.15);
+  transform: scale(1.05);
 }
 .lim-card__title {
   font-size: 1rem;
@@ -24,9 +29,13 @@
   font-size: 0.8rem;
   color: var(--text-muted);
   padding: 0.5rem 0.75rem;
-  border-left: 3px solid rgba(255,255,255,0.1);
+  border-left: 3px solid rgba(99, 102, 241, 0.2);
   margin: 0 0 0.75rem;
   line-height: 1.6;
+  transition: border-color var(--duration-base);
+}
+.clay-card:hover .lim-card__example {
+  border-left-color: rgba(99, 102, 241, 0.4);
 }
 .lim-card__explain {
   font-size: 0.85rem;

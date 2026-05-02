@@ -36,6 +36,7 @@
 .ctx-nav-btn:hover:not(:disabled) {
   border-color: var(--accent-1);
   color: var(--text-primary);
+  box-shadow: var(--clay-shadow-sm), 0 0 12px rgba(99, 102, 241, 0.12);
 }
 .ctx-nav-btn:disabled {
   opacity: 0.3;
@@ -65,11 +66,13 @@
 .ctx-preset-btn:hover {
   border-color: var(--accent-1);
   color: var(--text-primary);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.08);
 }
 .ctx-preset-btn--active {
   background: var(--accent-1);
   color: white;
   border-color: var(--accent-1);
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.25);
 }
 .ctx-tokens-scroll {
   width: 100%;
@@ -97,7 +100,7 @@
   background: rgba(99,102,241,0.15);
   border-color: rgba(99,102,241,0.4);
   color: var(--text-primary);
-  box-shadow: 0 0 8px rgba(99,102,241,0.15);
+  box-shadow: 0 0 10px rgba(99,102,241,0.18);
 }
 .ctx-token--hidden {
   background: rgba(255,255,255,0.03);
@@ -133,6 +136,7 @@
   font-weight: 800;
   color: var(--accent-1);
   font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
 }
 .ctx-stat-value--muted { color: var(--text-muted); }
 .ctx-stat-value--dim { opacity: 0.5; }
@@ -148,6 +152,10 @@
   border: var(--glass-border);
   border-left: 3px solid var(--accent-1);
   border-radius: var(--radius-md);
+  transition: border-color var(--duration-base);
+}
+.ctx-explanation:hover {
+  border-left-color: var(--accent-2);
 }
 .ctx-explanation p {
   font-size: 0.9rem;

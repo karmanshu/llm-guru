@@ -19,11 +19,12 @@
   padding: 1.25rem 1.5rem;
   box-shadow: var(--clay-shadow-sm);
   border: 1px solid rgba(255,255,255,0.06);
-  transition: box-shadow var(--duration-base);
+  transition: box-shadow var(--duration-base), border-color var(--duration-base);
   overflow: hidden;
 }
 .tf-stage--active {
-  box-shadow: var(--clay-shadow-hover), 0 0 20px rgba(99,102,241,0.1);
+  box-shadow: var(--clay-shadow-hover), 0 0 24px rgba(99,102,241,0.12);
+  border-color: rgba(99, 102, 241, 0.15);
 }
 .tf-stage--future {
   opacity: 0.4;
@@ -45,6 +46,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.25);
 }
 .tf-stage__name {
   font-size: 1rem;
@@ -99,6 +101,11 @@
   font-size: 0.65rem;
   color: rgba(255,255,255,0.9);
   border-radius: 4px;
+  transition: transform var(--duration-fast);
+}
+.tf-matrix__cell:hover {
+  transform: scale(1.1);
+  z-index: 1;
 }
 .tf-token-row {
   display: flex;
@@ -116,6 +123,10 @@
   font-size: 0.85rem;
   font-family: var(--font-mono);
   color: var(--text-primary);
+  transition: box-shadow var(--duration-fast);
+}
+.tf-token:hover {
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.15);
 }
 .tf-token__idx {
   font-size: 0.6rem;
@@ -164,6 +175,7 @@
   background: var(--accent-gradient);
   border-radius: var(--radius-full);
   min-width: 4px;
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.15);
 }
 .tf-softmax-pct {
   font-family: var(--font-mono);
@@ -210,11 +222,12 @@
   color: var(--text-muted);
   opacity: 0.3;
   font-size: 1rem;
-  transition: opacity var(--duration-fast);
+  transition: opacity var(--duration-fast), color var(--duration-fast);
 }
 .tf-arrow--active {
   opacity: 0.8;
   color: var(--accent-1);
+  filter: drop-shadow(0 0 6px rgba(99, 102, 241, 0.3));
 }
 
 @media (max-width: 768px) {

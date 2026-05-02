@@ -6,11 +6,30 @@
 .section--alt {
   background-color: var(--bg-secondary);
 }
+
+/* Subtle radial gradient per section for visual identity */
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+.section:nth-of-type(odd)::before {
+  background: radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.04) 0%, transparent 60%);
+}
+.section:nth-of-type(even)::before {
+  background: radial-gradient(ellipse at 80% 50%, rgba(139, 92, 246, 0.04) 0%, transparent 60%);
+}
+
 .section__container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {

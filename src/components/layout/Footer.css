@@ -3,6 +3,16 @@
   background: var(--bg-secondary);
   border-top: var(--glass-border);
   text-align: center;
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.3), transparent);
 }
 .footer__inner {
   max-width: 1200px;
@@ -16,6 +26,7 @@
 .footer__heart {
   display: inline-block;
   animation: heartbeat 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(239, 68, 68, 0.4));
 }
 @keyframes heartbeat {
   0%, 100% { transform: scale(1); }

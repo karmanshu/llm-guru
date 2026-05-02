@@ -10,8 +10,12 @@
   font-weight: 600;
   cursor: pointer;
   border: none;
-  transition: box-shadow var(--duration-base) var(--ease-smooth);
+  transition: box-shadow var(--duration-base) var(--ease-smooth),
+              transform var(--duration-fast) var(--ease-smooth),
+              filter var(--duration-base) var(--ease-smooth);
   letter-spacing: -0.01em;
+  position: relative;
+  overflow: hidden;
 }
 .btn:disabled {
   opacity: 0.4;
@@ -23,10 +27,12 @@
   box-shadow: var(--clay-shadow-sm);
 }
 .btn--primary:hover:not(:disabled) {
-  box-shadow: var(--clay-shadow-hover);
+  box-shadow: var(--clay-shadow-hover), var(--glow-accent);
+  filter: brightness(1.08);
 }
 .btn--primary:active:not(:disabled) {
   box-shadow: var(--clay-shadow-pressed);
+  filter: brightness(0.95);
 }
 .btn--secondary {
   background: var(--bg-surface-clay);
@@ -35,8 +41,8 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .btn--secondary:hover:not(:disabled) {
-  box-shadow: var(--clay-shadow-hover);
-  border-color: rgba(99, 102, 241, 0.2);
+  box-shadow: var(--clay-shadow-hover), 0 0 16px rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.25);
 }
 .btn--secondary:active:not(:disabled) {
   box-shadow: var(--clay-shadow-pressed);
@@ -50,6 +56,7 @@
 .btn--ghost:hover:not(:disabled) {
   color: var(--accent-1);
   border-color: var(--accent-1);
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.08);
 }
 .btn--sm {
   padding: 0.5em 1em;

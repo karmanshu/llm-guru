@@ -12,6 +12,12 @@
   font-size: 0.9rem;
   line-height: 1.7;
   color: var(--text-secondary);
+  transition: box-shadow var(--duration-base) var(--ease-smooth),
+              border-color var(--duration-base) var(--ease-smooth);
+}
+.info-panel:hover {
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.06);
+  border-left-color: var(--accent-2);
 }
 .info-panel__icon {
   flex-shrink: 0;

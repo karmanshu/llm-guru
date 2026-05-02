@@ -10,6 +10,10 @@
   border-radius: var(--radius-md);
   background: var(--bg-surface-clay);
   box-shadow: var(--clay-shadow);
+  transition: box-shadow var(--duration-base);
+}
+.neural-canvas:hover {
+  box-shadow: var(--clay-shadow-hover), 0 0 30px rgba(99, 102, 241, 0.06);
 }
 .neural-controls {
   display: flex;

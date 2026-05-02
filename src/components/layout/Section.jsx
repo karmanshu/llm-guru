@@ -10,9 +10,9 @@ export default function Section({ id, alt, children, className = '' }) {
                   ref={ref}
                   id={id}
                   className={`section ${alt ? 'section--alt' : ''} ${className}`}
-                  initial={{ opacity: 0 }}
-                  animate={isVisible ? { opacity: 1 } : {}}
-                  transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
                   <div className="section__container">
                         {children}

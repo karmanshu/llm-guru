@@ -5,8 +5,11 @@
   border: var(--glass-border);
   border-radius: var(--radius-lg);
   padding: 2rem;
-  transition: box-shadow var(--duration-base) var(--ease-smooth);
+  transition: box-shadow var(--duration-base) var(--ease-smooth),
+              border-color var(--duration-base) var(--ease-smooth);
+  position: relative;
 }
 .glass-card:hover {
-  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1), var(--glow-soft);
+  border-color: rgba(99, 102, 241, 0.12);
 }

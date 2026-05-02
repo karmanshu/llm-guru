@@ -9,6 +9,16 @@
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: var(--glass-border);
 }
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.3), transparent);
+  opacity: 0.6;
+}
 .navbar__inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -55,16 +65,19 @@
   cursor: pointer;
   padding: 0;
   transition: all var(--duration-fast) var(--ease-smooth);
+  position: relative;
 }
 .navbar__dot--active {
   background: var(--accent-1);
   border-color: var(--accent-1);
-  box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5), 0 0 20px rgba(99, 102, 241, 0.2);
   transform: scale(1.3);
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 .navbar__dot:hover {
   border-color: var(--accent-2);
   transform: scale(1.2);
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
 }
 .navbar__top-btn {
   width: 36px;
@@ -83,6 +96,19 @@
 .navbar__top-btn:hover {
   color: var(--accent-1);
   border-color: var(--accent-1);
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.15);
+}
+
+/* Scroll progress indicator */
+.navbar__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  border-radius: 0 var(--radius-full) var(--radius-full) 0;
+  transition: width 100ms linear;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {

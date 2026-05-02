@@ -11,6 +11,7 @@
   font-weight: 800;
   color: var(--accent-2);
   text-align: center;
+  text-shadow: 0 0 24px rgba(139, 92, 246, 0.2);
 }
 .params-grid {
   display: grid;
@@ -24,6 +25,7 @@
   font-weight: 900;
   color: var(--accent-1);
   font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
 }
 .params-stat__label {
   font-size: 0.85rem;
@@ -40,6 +42,10 @@
   background: var(--bg-surface-clay);
   border-radius: var(--radius-md);
   box-shadow: var(--clay-shadow-sm);
+  transition: box-shadow var(--duration-base);
+}
+.params-comparison:hover {
+  box-shadow: var(--clay-shadow-hover), var(--glow-soft);
 }
 .params-comparison h4 {
   text-align: center;
@@ -64,7 +70,7 @@
   background: rgba(255,255,255,0.03);
 }
 .params-bar-row--active {
-  background: rgba(99,102,241,0.06);
+  background: rgba(99,102,241,0.08);
 }
 .params-bar-label {
   width: 100px;
@@ -84,6 +90,7 @@
   height: 100%;
   background: var(--accent-gradient);
   border-radius: var(--radius-full);
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.15);
 }
 .params-bar-value {
   width: 50px;

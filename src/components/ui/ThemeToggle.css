@@ -16,8 +16,10 @@
   align-items: center;
   justify-content: center;
   box-shadow: var(--clay-shadow-sm);
-  transition: box-shadow var(--duration-base);
+  transition: box-shadow var(--duration-base),
+              border-color var(--duration-base);
 }
 .theme-toggle:hover {
-  box-shadow: var(--clay-shadow-hover);
+  box-shadow: var(--clay-shadow-hover), 0 0 20px rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.2);
 }

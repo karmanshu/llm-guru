@@ -24,10 +24,14 @@ const sections = [
 export default function Navbar() {
       const [show, setShow] = useState(false);
       const [activeSection, setActiveSection] = useState('hero');
+      const [scrollProgress, setScrollProgress] = useState(0);
 
       useEffect(() => {
             const handleScroll = () => {
                   setShow(window.scrollY > window.innerHeight * 0.5);
+                  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                  const progress = scrollHeight > 0 ? Math.min(window.scrollY / scrollHeight, 1) : 0;
+                  setScrollProgress(progress);
             };
             window.addEventListener('scroll', handleScroll, { passive: true });
             return () => window.removeEventListener('scroll', handleScroll);
@@ -90,6 +94,8 @@ export default function Navbar() {
                                           <ChevronUp size={18} />
                                     </button>
                               </div>
+                              <div className="navbar__progress" style={{ width: `${scrollProgress * 100}%` }} aria-hidden="true" />
+
                         </motion.nav>
                   )}
             </AnimatePresence>
