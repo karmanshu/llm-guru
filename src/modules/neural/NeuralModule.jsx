@@ -145,7 +145,7 @@ export default function NeuralModule() {
             });
       }, [getNodePositions]);
 
-      const animate = useCallback(() => {
+      function animate() {
             particlesRef.current = particlesRef.current.filter(p => p.t < 1);
             particlesRef.current.forEach(p => { p.t += 0.015; });
 
@@ -159,7 +159,7 @@ export default function NeuralModule() {
 
             drawCanvas();
             animRef.current = requestAnimationFrame(animate);
-      }, [drawCanvas]);
+      }
 
       const startAnimation = () => {
             if (isAnimating) return;

@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Section from '../../components/layout/Section';
 import SectionHeader from '../../components/shared/SectionHeader';
@@ -13,10 +13,8 @@ export default function PredictorModule() {
       const [input, setInput] = useState('the cat sat');
       const [temp, setTemp] = useState(0.7);
       const debouncedInput = useDebounce(input, 150);
-      const predictionsKey = useRef(0);
 
       const predictions = useMemo(() => {
-            predictionsKey.current++;
             return engine.predict(debouncedInput, temp, 5);
       }, [debouncedInput, temp]);
 
@@ -66,7 +64,7 @@ export default function PredictorModule() {
                         <div className="pred-results" role="region" aria-live="polite" aria-label="Predictions">
                               {predictions.map((p, i) => (
                                     <motion.button
-                                          key={`${predictionsKey.current}-${i}`}
+                                          key={`${debouncedInput}-${temp}-${p.word}-${i}`}
                                           className={`pred-row ${p.isWinner ? 'pred-row--winner' : ''}`}
                                           onClick={() => appendWord(p.word)}
                                           initial={{ opacity: 0, x: -10 }}

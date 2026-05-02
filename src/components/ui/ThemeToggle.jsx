@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { Sun, Moon } from 'lucide-react';
 import './ThemeToggle.css';
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ className = '' }) {
       const { theme, dispatch } = useTheme();
       const isDark = theme === 'dark';
 
       return (
             <motion.button
-                  className="theme-toggle"
+                  className={`theme-toggle ${className}`}
                   onClick={() => dispatch({ type: 'TOGGLE' })}
                   aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
                   whileHover={{ scale: 1.05 }}

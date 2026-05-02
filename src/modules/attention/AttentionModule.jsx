@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 import Section from '../../components/layout/Section';
 import SectionHeader from '../../components/shared/SectionHeader';
 import Slider from '../../components/ui/Slider';
@@ -59,8 +59,7 @@ const HEAD_DESCS = [
 export default function AttentionModule() {
       const [headIdx, setHeadIdx] = useState(0);
       const [selectedRow, setSelectedRow] = useState(null);
-      const [hoverCell, setHoverCell] = useState(null);
-      const [sRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+      const [sRef] = useIntersectionObserver({ threshold: 0.1 });
 
       const weights = generateHead(headIdx);
 
@@ -115,8 +114,6 @@ export default function AttentionModule() {
                                                             key={j}
                                                             className={`attn-heatmap__cell ${selectedRow === i || selectedRow === null ? '' : 'attn-heatmap__cell--dim'}`}
                                                             style={{ background: heatmapColor(val) }}
-                                                            onMouseEnter={() => setHoverCell({ i, j, val })}
-                                                            onMouseLeave={() => setHoverCell(null)}
                                                             title={`${TOKENS[i]} → ${TOKENS[j]}: ${(val * 100).toFixed(1)}%`}
                                                       >
                                                             {val > 0.05 && <span className="attn-heatmap__val">{(val * 100).toFixed(0)}%</span>}

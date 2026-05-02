@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import ThemeToggle from './components/ui/ThemeToggle';
 import HeroSection from './modules/hero/HeroSection';
 
 // Lazy load heavy modules for performance
@@ -11,11 +10,13 @@ const TokenizerModule = lazy(() => import('./modules/tokenizer/TokenizerModule')
 const EmbeddingsModule = lazy(() => import('./modules/embeddings/EmbeddingsModule'));
 const PositionalModule = lazy(() => import('./modules/positional/PositionalModule'));
 const NeuralModule = lazy(() => import('./modules/neural/NeuralModule'));
+const VisionModule = lazy(() => import('./modules/vision/VisionModule'));
 const TransformerModule = lazy(() => import('./modules/transformer/TransformerModule'));
 const AttentionModule = lazy(() => import('./modules/attention/AttentionModule'));
 const ContextModule = lazy(() => import('./modules/context/ContextModule'));
 const PredictorModule = lazy(() => import('./modules/predictor/PredictorModule'));
 const TrainingModule = lazy(() => import('./modules/training/TrainingModule'));
+const TrainYourLLMModule = lazy(() => import('./modules/train-your-llm/TrainYourLLMModule'));
 const ParametersModule = lazy(() => import('./modules/parameters/ParametersModule'));
 const LimitationsModule = lazy(() => import('./modules/limitations/LimitationsModule'));
 const SafetyModule = lazy(() => import('./modules/safety/SafetyModule'));
@@ -48,7 +49,6 @@ export default function App() {
 
       <a href="#what-is-llm" className="skip-link">Skip to content</a>
       <Navbar />
-      <ThemeToggle />
 
       <main>
         <HeroSection />
@@ -58,11 +58,13 @@ export default function App() {
           <EmbeddingsModule />
           <PositionalModule />
           <NeuralModule />
+          <VisionModule />
           <TransformerModule />
           <AttentionModule />
           <ContextModule />
           <PredictorModule />
           <TrainingModule />
+          <TrainYourLLMModule />
           <ParametersModule />
           <LimitationsModule />
           <SafetyModule />

@@ -94,7 +94,7 @@ export default function PositionalModule() {
             ctx.shadowBlur = 0;
 
             // Draw dots on selected line
-            points.forEach((p, d) => {
+            points.forEach((p) => {
                   ctx.beginPath();
                   ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
                   ctx.fillStyle = '#8b5cf6';

@@ -1,6 +1,6 @@
 import { useRef, useEffect, useCallback } from 'react';
 
-export function useCanvas(draw, deps = []) {
+export function useCanvas(draw) {
   const canvasRef = useRef(null);
   const animIdRef = useRef(null);
 
@@ -34,12 +34,14 @@ export function useCanvas(draw, deps = []) {
     window.addEventListener('resize', debouncedResize, { passive: true });
 
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      const animId = animIdRef.current;
       window.removeEventListener('resize', debouncedResize);
       clearTimeout(timer);
-      if (animIdRef.current) cancelAnimationFrame(animIdRef.current);
+      if (animId) cancelAnimationFrame(animId);
       if (typeof cleanup === 'function') cleanup();
     };
-  }, deps);
+  }, [draw, setupCanvas]);
 
   return { canvasRef, animIdRef, setupCanvas };
 }

@@ -1,5 +1,7 @@
 import { createContext, useContext, useReducer, useEffect } from 'react';
 
+/* eslint-disable react-refresh/only-export-components */
+
 const ThemeContext = createContext(null);
 
 function themeReducer(state, action) {
@@ -17,7 +19,7 @@ function getInitialTheme() {
       try {
             const stored = localStorage.getItem('llm-guru-theme');
             if (stored === 'light' || stored === 'dark') return stored;
-      } catch (e) { /* ignore */ }
+      } catch { /* ignore */ }
       if (window.matchMedia?.('(prefers-color-scheme: light)').matches) return 'light';
       return 'dark';
 }
@@ -27,7 +29,7 @@ export function ThemeProvider({ children }) {
 
       useEffect(() => {
             document.documentElement.setAttribute('data-theme', state.theme);
-            try { localStorage.setItem('llm-guru-theme', state.theme); } catch (e) { /* ignore */ }
+            try { localStorage.setItem('llm-guru-theme', state.theme); } catch { /* ignore */ }
       }, [state.theme]);
 
       useEffect(() => {
@@ -37,7 +39,7 @@ export function ThemeProvider({ children }) {
                         if (!localStorage.getItem('llm-guru-theme')) {
                               dispatch({ type: 'SET', payload: e.matches ? 'dark' : 'light' });
                         }
-                  } catch (err) { /* ignore */ }
+                  } catch { /* ignore */ }
             };
             mq.addEventListener('change', handler);
             return () => mq.removeEventListener('change', handler);
