@@ -23,7 +23,7 @@ const cards = [
             icon: Zap,
             color: '#f59e0b',
             title: 'Prediction',
-            desc: 'Predicts the most likely next word based on context, creating coherent and relevant responses one token at a time.',
+            desc: 'Predicts the most likely next word based on context, creating coherent and relevant responses one token at a time. Learns patterns from massive data.',
       },
 ];
 

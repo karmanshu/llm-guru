@@ -20,6 +20,7 @@
   padding: 0 2rem;
 }
 .footer__text {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   color: var(--text-muted);
   font-size: 0.9rem;
 }

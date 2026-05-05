@@ -111,7 +111,7 @@ export default function Navbar() {
                         >
                               <div className="navbar__inner">
                                     <button className="navbar__logo" onClick={scrollToTop} aria-label="Go to Home">
-                                          <span className="navbar__logo-mark">LG</span>
+                                          <span className="navbar__logo-mark">🐲</span>
                                           <span className="navbar__logo-text">LLM Guru</span>
                                     </button>
 

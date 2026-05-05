@@ -54,7 +54,7 @@
 }
 
 .navbar__logo:hover {
-  background: rgba(255, 255, 255, 0.045);
+  background: linear-gradient(135deg, #b179fa45, #7b60f44c);
   transform: translateY(-1px);
 }
 
@@ -64,15 +64,16 @@
   width: 2.25rem;
   height: 2.25rem;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #6366f1, #10b981);
+  background: linear-gradient(135deg, #b179faaa, #7b60f4b9);
   color: white;
-  font-size: 0.74rem;
+  font-size: 1.5rem;
   font-weight: 900;
   letter-spacing: 0;
   box-shadow: 0 0 18px rgba(99, 102, 241, 0.26);
 }
 
 .navbar__logo-text {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.98rem;
   font-weight: 900;
   white-space: nowrap;
@@ -114,7 +115,7 @@
   overflow-x: auto;
   border-radius: var(--radius-full);
   background: rgba(255, 255, 255, 0.035);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.057);
   scrollbar-width: none;
 }
 
@@ -138,13 +139,13 @@
 
 .navbar__item:hover {
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.06);
+  background: linear-gradient(135deg, #7b60f456, #b179fa5c);
   transform: translateY(-1px);
 }
 
 .navbar__item--active {
   color: white;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.92), rgba(16, 185, 129, 0.82));
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.92), rgba(226, 131, 250, 0.82));
   box-shadow: 0 8px 24px rgba(99, 102, 241, 0.22);
 }
 
@@ -249,7 +250,7 @@
 .navbar__progress {
   height: 100%;
   border-radius: 0 var(--radius-full) var(--radius-full) 0;
-  background: linear-gradient(90deg, #6366f1, #10b981, #f59e0b);
+  background: linear-gradient(90deg, #6366f1, #fdb2da, #da36ff);
   transition: width 120ms linear;
 }
 

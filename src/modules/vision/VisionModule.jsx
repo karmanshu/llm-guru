@@ -367,7 +367,7 @@ export default function VisionModule() {
       return (
             <Section id="vision-ai" alt>
                   <SectionHeader
-                        emoji="AI"
+                        emoji="👁️‍🗨️"
                         title="Computer Vision: How CNNs Read Images"
                         description="Upload an image and watch a CNN-style pipeline turn pixels into feature maps, pooled activations, segmentation masks, and training feedback."
                   />

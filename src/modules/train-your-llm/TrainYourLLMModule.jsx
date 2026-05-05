@@ -92,7 +92,7 @@ export default function TrainYourLLMModule() {
       return (
             <Section id="train-your-llm" alt className="train-llm-section">
                   <SectionHeader
-                        emoji="LLM"
+                        emoji="🧠"
                         title="How to Train Your LLM"
                         description="A practical, visual build plan for turning raw text into a small instruction-following language model."
                   />
