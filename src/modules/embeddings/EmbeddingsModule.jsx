@@ -83,7 +83,7 @@ export default function EmbeddingsModule() {
                               ctx.beginPath();
                               ctx.moveTo(sw.x * W, sw.y * H);
                               ctx.lineTo(w.x * W, w.y * H);
-                              ctx.strokeStyle = `rgba(192, 132, 252, ${alpha * 0.4})`;
+                              ctx.strokeStyle = `rgba(192, 132, 252, ${alpha * 10})`;
                               ctx.setLineDash([3, 3]);
                               ctx.lineWidth = 1;
                               ctx.stroke();
