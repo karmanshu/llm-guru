@@ -176,7 +176,6 @@
   flex-direction: column;
   gap: 0.7rem;
   overflow: hidden;
-  min-width: 200px;
 }
 
 .train-llm-step::after {
